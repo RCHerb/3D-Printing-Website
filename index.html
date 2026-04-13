@@ -8,18 +8,103 @@
 
 <style>
 body{font-family:Arial;margin:0;background:#f4f4f4;color:#333}
-header{background:linear-gradient(135deg,#0f172a,#1e293b);color:white;padding:40px;text-align:center}
+
+/* 🔥 HEADER */
+header{
+position:sticky;
+top:0;
+z-index:1000;
+background:linear-gradient(135deg,#0f172a,#1e293b);
+color:white;
+padding:30px;
+text-align:center;
+transition:all 0.3s ease;
+}
+
+/* Shrink effect */
+header.shrink{
+padding:15px;
+}
+
+/* LOGO */
+.logo{
+display:block;
+margin:auto;
+max-width:320px;
+width:100%;
+margin-bottom:15px;
+cursor:pointer;
+transition:all 0.3s ease;
+filter:drop-shadow(0 0 12px rgba(0,200,255,0.6));
+}
+
+/* Shrink logo */
+header.shrink .logo{
+max-width:200px;
+filter:drop-shadow(0 0 6px rgba(0,200,255,0.4));
+}
+
 nav{background:#111827;padding:12px;text-align:center}
 nav a{color:white;margin:0 15px;text-decoration:none;font-weight:bold}
+
 section{padding:60px 20px;max-width:1150px;margin:auto}
+
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.card{background:white;padding:15px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.12);text-align:center}
-.gallery img{width:100%;height:220px;object-fit:cover;border-radius:8px}
-footer{background:#0f172a;color:white;text-align:center;padding:20px;margin-top:40px}
-button{background:#2563eb;color:white;border:none;padding:12px 20px;border-radius:5px;cursor:pointer}
-form{background:white;padding:25px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.12)}
-input,select,textarea{width:100%;padding:10px;margin:10px 0;border:1px solid #ccc;border-radius:5px}
-.priceBox{background:#111827;color:white;padding:15px;border-radius:10px;text-align:center}
+
+.card{
+background:white;
+padding:15px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.12);
+text-align:center
+}
+
+.gallery img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:8px
+}
+
+footer{
+background:#0f172a;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px
+}
+
+button{
+background:#2563eb;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:5px;
+cursor:pointer
+}
+
+form{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.12)
+}
+
+input,select,textarea{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:5px
+}
+
+.priceBox{
+background:#111827;
+color:white;
+padding:15px;
+border-radius:10px;
+text-align:center
+}
 </style>
 
 <script>
@@ -37,6 +122,16 @@ if(material==='Resin') base+=20
 
 document.getElementById('priceResult').innerHTML="$"+base+"+"
 }
+
+/* 🔥 SHRINK HEADER ON SCROLL */
+window.addEventListener("scroll", function(){
+let header=document.querySelector("header");
+if(window.scrollY > 50){
+header.classList.add("shrink");
+}else{
+header.classList.remove("shrink");
+}
+});
 </script>
 
 </head>
@@ -45,17 +140,11 @@ document.getElementById('priceResult').innerHTML="$"+base+"+"
 
 <header>
 
-<svg viewBox="0 0 1200 300" width="100%" height="240">
-<defs>
-<path id="curve" d="M -100 250 Q 600 -60 1300 250"/>
-</defs>
+<a href="#">
+<img src="images/herbert-logo.png" alt="Herbert's 3D Printing Logo" class="logo">
+</a>
 
-<text font-size="64" fill="white" stroke="red" stroke-width="2" font-weight="bold">
-<textPath href="#curve" startOffset="50%" text-anchor="middle">
-Herbert's 3D Printing Solution
-</textPath>
-</text>
-</svg>
+<h1>Herbert's 3D Printing Solution</h1>
 
 <p>Herbert Fortner • 912-667-8934</p>
 <p>Chance Williams • 912-661-9949</p>
@@ -87,10 +176,7 @@ Herbert's 3D Printing Solution
 
 <section id="gallery">
 <h2>Customer Project Gallery</h2>
-
-<!-- AUTO GALLERY -->
 <div id="galleryContainer" class="grid gallery"></div>
-
 </section>
 
 <section id="quote">
@@ -137,9 +223,7 @@ Estimated Price: <span id="priceResult">$0</span>
 <p>© 2026 Herbert's 3D Printing Solution</p>
 </footer>
 
-<!-- 🔥 AUTO IMAGE SYSTEM -->
 <script>
-
 const imageFiles = [
 "phonecase.jpg",
 "printer1.jpg",
@@ -155,7 +239,6 @@ const imageFiles = [
 const gallery = document.getElementById("galleryContainer");
 
 imageFiles.forEach(file => {
-
 let cleanName = file.replace('.jpg','').replace('.png','');
 
 const card = document.createElement("div");
@@ -167,9 +250,7 @@ card.innerHTML = `
 `;
 
 gallery.appendChild(card);
-
 });
-
 </script>
 
 </body>
