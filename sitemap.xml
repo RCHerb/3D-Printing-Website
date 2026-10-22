@@ -3,7 +3,7 @@
 
   <url>
     <loc>https://herberts3dprintingsolution.com/</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <priority>1.00</priority>
   </url>
 
@@ -39,8 +39,13 @@
 
   <url>
     <loc>https://herberts3dprintingsolution.com/3d-printed-replacement-parts-savannah.html</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <priority>0.90</priority>
   </url>
+  <url>
+  <loc>https://herberts3dprintingsolution.com/student-3d-printing-savannah.html</loc>
+  <lastmod>2026-10-22</lastmod>
+  <priority>0.90</priority>
+</url>
 
 </urlset>
