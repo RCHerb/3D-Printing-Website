@@ -8,17 +8,17 @@
 <title>Custom 3D Printing Services in Savannah GA | Herbert's 3D Printing Solution</title>
 
 <!-- SEO DESCRIPTION -->
-<meta name="description" content="Herbert's 3D Printing Solution provides custom 3D printing, STL file printing, prototypes, replacement parts, CAD design, and student project printing in Savannah, GA. SCAD students and Savannah-area creators are welcome.">
+<meta name="description" content="Herbert's 3D Printing Solution provides custom 3D printing, STL file printing, prototypes, replacement parts, CAD assistance, and custom metal and nylon printing quotes in Savannah, GA. SCAD students and Savannah-area creators are welcome.">
 
 <!-- SEO KEYWORDS -->
-<meta name="keywords" content="3D printing Savannah GA, custom 3D printing Savannah, SCAD 3D printing, student 3D printing Savannah, STL printing Savannah, prototype printing Savannah, CAD design Savannah, replacement parts 3D printing, local 3D printing service, Herbert's 3D Printing Solution">
+<meta name="keywords" content="3D printing Savannah GA, metal 3D printing Savannah, nylon SLS printing, STL repair Savannah, 3D scanning Savannah, custom 3D printing Savannah, SCAD 3D printing, student 3D printing Savannah, STL printing Savannah, prototype printing Savannah, CAD design Savannah, replacement parts 3D printing, local 3D printing service, Herbert's 3D Printing Solution">
 
 <meta name="author" content="Herbert's 3D Printing Solution">
 <meta name="robots" content="index, follow">
 
 <!-- OPEN GRAPH -->
 <meta property="og:title" content="Herbert's 3D Printing Solution | Savannah GA">
-<meta property="og:description" content="Custom 3D printing, CAD design, prototyping, and replacement parts in Savannah, Georgia.">
+<meta property="og:description" content="Custom 3D printing, prototyping, replacement parts, and specialty metal and nylon manufacturing quotes in Savannah, Georgia.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://herberts3dprintingsolution.com">
 <meta property="og:image" content="https://herberts3dprintingsolution.com/images/herberts-3d-printing-logo-savannah.png">
@@ -55,7 +55,7 @@
     "Richmond Hill GA",
     "Tybee Island GA"
   ],
-  "description": "Custom 3D printing, CAD design, prototyping, and replacement parts in Savannah, Georgia."
+  "description": "Custom 3D printing, prototyping, replacement parts, and specialty metal and nylon manufacturing quotes in Savannah, Georgia."
 }
 </script>
 
@@ -123,6 +123,28 @@ width:100%;
 height:220px;
 object-fit:cover;
 border-radius:8px
+}
+
+/* Featured customer projects: larger full-length photographs, without cropping. */
+.featured-projects{
+ display:grid;
+ grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:18px;
+ margin-bottom:24px;
+}
+.featured-projects .card{display:flex;flex-direction:column;align-items:center;padding:10px;}
+.featured-projects img{
+ display:block;
+ width:100%;
+ height:720px;
+ object-fit:contain;
+ object-position:center;
+ border-radius:8px;
+ background:#f5f5f5;
+}
+@media(max-width:650px){
+ .featured-projects{grid-template-columns:1fr;}
+ .featured-projects img{height:auto;max-height:none;}
 }
 
 footer{
@@ -223,7 +245,9 @@ class="logo">
 <nav>
 
 <a href="#services">Services</a>
-<a href="#gallery">Gallery</a>
+ <a href="#specialty">Metal &amp; Nylon</a>
+ <a href="#scanning">Scanning &amp; STL Repair</a>
+ <a href="#gallery">Gallery</a>
 <a href="#quote">Quote</a>
 <a href="#students">Student Projects</a>
 <a href="student-3d-printing-savannah.html">Student 3D Printing</a>
@@ -263,11 +287,38 @@ Professional custom 3D printing, CAD design, rapid prototyping, and replacement 
 
 <div class="card"><h3>Student & Creative Projects</h3><p>Printing for models, props, presentations, class projects, and creative work.</p></div>
 
-<div class="card"><h3>CAD & Design Assistance</h3><p>Design help for projects that need preparation or modification before printing.</p></div>
+ <div class="card"><h3>CAD & Design Assistance</h3><p>Design help for projects that need preparation or modification before printing.</p></div>
+ <div class="card"><h3>Metal 3D Printing Quotes</h3><p>Request a custom quote for metal additive manufacturing through a specialized production partner.</p></div>
+ <div class="card"><h3>Nylon SLS Printing Quotes</h3><p>Explore nylon powder-bed printing for detailed, durable parts through a manufacturing partner.</p></div>
+ <div class="card"><h3>3D Scanning &amp; STL Review</h3><p>Ask about scanning a physical object or assessing an existing model for repair and printing.</p></div>
 
 </div>
 
 </section>
+
+ <section id="specialty" class="feature-section">
+ <h2>Metal &amp; Nylon 3D Printing — Custom Quotes</h2>
+ <p>Need a material or manufacturing process beyond our in-house desktop printing? We can review suitable projects and request production quotes from a specialized manufacturing partner.</p>
+ <div class="grid">
+ <div class="card"><h3>Metal Additive Manufacturing (SLM)</h3><p>Ask about metal prototypes, specialized components, and one-off parts. Material choices, tolerances, finishing, pricing, and delivery are confirmed per project.</p></div>
+ <div class="card"><h3>Nylon Powder-Bed Printing (SLS)</h3><p>Ask about nylon parts with complex geometry and functional applications. Available materials and performance requirements are reviewed before quoting.</p></div>
+ <div class="card"><h3>Other Specialty Processes</h3><p>We can inquire about resin printing and additional manufacturing or finishing options when your project calls for them.</p></div>
+ </div>
+ <p><strong>How specialty orders work:</strong> Send your STL or STEP file and project requirements. We review feasibility, obtain a partner quote, and confirm production and shipping details before accepting an order. Specialty manufacturing is performed by an outside partner, not on our in-house printer.</p>
+ <p><a class="action-link" href="#project-request">Request a specialty manufacturing quote →</a></p>
+ </section>
+
+ <section id="scanning" class="feature-section">
+ <h2>3D Scanning, STL Inspection &amp; Model Preparation</h2>
+ <p>Have an existing object to digitize, or a model that will not print correctly? Tell us what you need. We are developing and evaluating these workflows and can review selected projects individually.</p>
+ <div class="grid">
+ <div class="card"><h3>3D Scanning — By Evaluation</h3><p>Discuss scanning a physical object for reference or model development. Scan suitability depends on object size, surface finish, detail, and required accuracy.</p></div>
+ <div class="card"><h3>STL Inspection &amp; Repair</h3><p>Ask about checking mesh integrity, holes, disconnected geometry, dimensions, and print readiness. We confirm what repairs are feasible before quoting.</p></div>
+ <div class="card"><h3>Model Cutting &amp; Separation</h3><p>Ask whether a large model can be divided into printable sections. Cutting and assembly preparation are assessed case by case.</p></div>
+ </div>
+ <p><strong>Please note:</strong> Scanning, model repair, and model separation are currently offered for project review rather than guaranteed turnaround or guaranteed reproduction accuracy.</p>
+ <p><a class="action-link" href="#project-request">Tell us about your model →</a></p>
+ </section>
 
 <section id="students">
 <h2>3D Printing for Savannah Students, Designers & Creative Projects</h2>
@@ -279,7 +330,7 @@ Professional custom 3D printing, CAD design, rapid prototyping, and replacement 
 <div class="card"><h3>STL File Printing</h3><p>Already have an STL file? Submit your project details and we'll review the file, material, size, and print requirements.</p></div>
 </div>
 <p><strong>SCAD students and other Savannah-area students are welcome.</strong> Local Savannah pickup is available by arrangement.</p>
-<p><strong>3D scanning and part replication are available for select projects.</strong></p>
+<p><strong>Interested in 3D scanning or part replication?</strong> Contact us for a feasibility review; these services are being evaluated for select projects.</p>
 <p><a href="student-3d-printing-savannah.html"><strong>Learn more about student 3D printing in Savannah →</strong></a></p>
 <p><small>Herbert's 3D Printing Solution is an independent Savannah business and is not affiliated with or endorsed by the Savannah College of Art and Design (SCAD).</small></p>
 </section>
@@ -288,14 +339,26 @@ Professional custom 3D printing, CAD design, rapid prototyping, and replacement 
 
 <h2>Customer Project Gallery</h2>
 
+<div class="featured-projects">
+  <div class="card">
+    <img src="antique-figurine-reproduction.jpg" alt="Original antique-style figurine beside an unpainted 3D printed reproduction" loading="lazy">
+    <h3>Figurine Reproduction</h3>
+    <p>Original decorative figurine alongside its 3D-printed reproduction, created from a 3D scan with mesh cleanup before printing. The reproduction is shown before finishing or painting; results vary by project.</p>
+  </div>
+  <div class="card">
+    <img src="custom-female-figurine.jpg" alt="Custom 3D printed female figurine with painted red top and shoes" loading="lazy">
+    <h3>Custom Decorative Figurine</h3>
+    <p>Example of a detailed figurine print featuring sculpted hair, clothing, and hand-painted color accents.</p>
+  </div>
+</div>
 <div id="galleryContainer" class="grid gallery"></div>
 
 </section>
 
 <section id="quote">
 
-<h2>Quick Price Estimator</h2>
-<p><strong>Rough estimate only:</strong> Final pricing depends on the model, dimensions, material usage, print time, supports, complexity, finishing, and any CAD/design work required.</p>
+<h2>Quick Price Estimator — Standard Plastic Printing</h2>
+<p><strong>Rough estimate only:</strong> This estimator applies only to basic desktop plastic printing. Final pricing depends on the model, dimensions, material usage, print time, supports, complexity, finishing, and any CAD/design work required. Metal, SLS nylon, scanning, and STL repair require individual quotes.</p>
 
 <form onsubmit="event.preventDefault();estimatePrice();">
 
@@ -329,10 +392,10 @@ Estimated Starting Price: <span id="priceResult">$0</span>
 <p><strong>2. Receive your final quote.</strong> We review the model, material, print time, complexity, and any design work.</p>
 <p><strong>3. Approve and pay securely.</strong> Once you approve the quote, we send a secure Stripe invoice or payment link. Full payment is due before custom production begins.</p>
 <p><strong>4. We print your project.</strong> After payment is received, your approved project enters our production queue. No printing begins before payment.</p>
-<p><strong>Custom Project Payment Policy:</strong> We do not begin printing until the final quote has been approved and payment has been received. If project requirements change after approval, we may provide a revised quote before continuing.</p>
+<p><strong>Custom Project Payment Policy:</strong> We do not begin production until the final quote has been approved and payment has been received. If project requirements change after approval, we may provide a revised quote before continuing.</p>
 </section>
 
-<section>
+<section id="project-request">
 <h2>Submit Your Project for a Quote</h2>
 <p>Describe your project below. We respond within 24 hours.</p>
 
@@ -343,8 +406,21 @@ Estimated Starting Price: <span id="priceResult">$0</span>
 <input type="email" name="Email" placeholder="Email" required>
 
 <input type="text" name="Phone" placeholder="Phone">
+<label for="projectService"><strong>What service do you need?</strong></label>
+<select id="projectService" name="Service" required>
+<option value="" selected disabled>Select a service</option>
+<option value="Standard 3D Printing">Standard 3D Printing</option>
+<option value="Metal 3D Printing Quote">Metal 3D Printing Quote</option>
+<option value="Nylon SLS Printing Quote">Nylon SLS Printing Quote</option>
+<option value="3D Scanning Feasibility Review">3D Scanning Feasibility Review</option>
+<option value="STL Inspection or Repair">STL Inspection or Repair</option>
+<option value="Model Cutting or Separation">Model Cutting or Separation</option>
+<option value="CAD or Design Assistance">CAD or Design Assistance</option>
+<option value="Other Project">Other Project</option>
+</select>
 
-<textarea name="Description" placeholder="Describe your project"></textarea>
+<textarea name="Description" placeholder="Describe your project, approximate dimensions, material preferences, quantity, deadline, and whether you have an STL or STEP file" required></textarea>
+<p class="form-hint">Have an STL or STEP file? Mention it here. We can arrange file sharing when we respond; this form does not upload files.</p>
 
 <button type="submit">Request a Quote</button>
 
